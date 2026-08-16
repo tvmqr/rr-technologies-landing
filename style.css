@@ -1,0 +1,254 @@
+/* ===== GLOBAL STYLES ===== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Primary: #5380EA;
+  --Text-Dark: #121212;
+  --Text-White: #FFFFFF;
+  --Text-GreyDark: #0F172A;
+  --Text-Paragrapf: #475569;
+  --FontFamily: Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--FontFamily);
+  background-color: var(--Text-White);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 37.5px;
+  height: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+*:focus-visible {
+  outline: 2px solid var(--Primary);
+  outline-offset: 2px;
+}
+
+
+
+
+
+/* ===== HEADER ===== */
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__content img {
+    height: 64px;
+    width: 64px;
+    margin: 15px 0;
+    object-fit: cover;
+}
+
+
+.header__nav-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.header__nav-bar a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Text-Dark);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+.header__contactus-link {
+    height: 37px;
+    width: 123px;
+    background-color: var(--Primary);
+    border-radius: 100px;
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Text-White);
+    text-transform: capitalize;
+}
+
+
+
+
+
+/* ===== HERO ===== */
+
+.hero {
+    background: linear-gradient(rgba(83, 128, 234, 0.1), rgba(83, 128, 234, 0.1)), url(assets/images/head-background.webp);
+    background-size: cover;
+    background-position: center;
+    height: 791px;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 140px;
+    padding-bottom: 82px;
+}
+
+
+
+.hero__welcome {
+    background: url(assets/images/head-planet.webp) no-repeat top center / 100% auto;
+    width: 100%;
+    max-width: 996px;
+    aspect-ratio: 996 / 457;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.hero__welcome h1 {
+    margin-top: 11%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 68px;
+    font-weight: 900;
+    line-height: 83px;
+    letter-spacing: -0.02em;
+    color: var(--Text-GreyDark);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.welcome-rr {
+    color: var(--Primary);
+}
+
+
+.header__welcome__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.header__welcome__bottom p {
+    max-width: 557px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--Text-Paragrapf);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.header__welcome__bottom a {
+    height: 45px;
+    width: 130px;
+    background-color: var(--Text-GreyDark);
+    border-radius: 8px;
+    /* flex */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Text-White);
+    text-transform: capitalize;
+}
+
+
+
+
+
+.hero__mouse {
+    height: 39px;
+    width: 39px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+
+
+
+
+/* ===== MOBILE (≤767px) ===== */
+
+@media (max-width: 767px) {
+  /* Здесь стили для телефонов */
+}
