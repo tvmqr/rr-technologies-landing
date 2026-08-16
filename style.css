@@ -14,7 +14,11 @@
   --Text-White: #FFFFFF;
   --Text-GreyDark: #0F172A;
   --Text-Paragrapf: #475569;
+  --Red: #E54A2A;
   --FontFamily: Arial, Helvetica, sans-serif;
+  --Nunito: 'Nunito', sans-serif;
+  --Open-Sans: 'Open Sans', sans-serif;
+  --Roboto: 'Roboto', sans-serif;
 }
 
 html {
@@ -85,9 +89,8 @@ button {
 /* ===== HEADER ===== */
 
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
-    z-index: 1000;
     width: 100%;
 }
 
@@ -236,6 +239,249 @@ button {
     width: 39px;
     object-fit: cover;
 }
+
+
+
+
+
+/* ===== ABOUT ===== */
+
+.about {
+    padding: 90px 0 200px;
+}
+
+.about__content {
+    max-width: 1037px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 77px;
+}
+
+
+
+/* head */
+
+.about__head {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+    text-align: center;
+}
+
+
+.about__head h2 {
+    font-family: var(--Roboto);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--Primary);
+    text-transform: capitalize;
+}
+
+
+.about__head__main-agency-parapgaph {
+    max-width: 787px;
+    font-family: var(--Nunito);
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+    color: var(--Text-GreyDark);
+}
+
+.about__head__main-agency-parapgaph span {
+    color: var(--Red);
+}
+
+
+.about__head__normal-paragraph {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--Text-Paragrapf);
+}
+
+
+
+/* middle part */
+
+.about__head__main__middle-part {
+    display: flex;
+}
+
+.about__middle-part {
+    display: flex;
+    gap: 10px;
+    height: 329px;
+}
+
+
+
+/* show more */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.about__text-wrap {
+    width: 522px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.about__text {
+    width: 100%;
+    max-width: 480px;
+    max-height: 310px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    position: relative;
+    text-align: left;
+}
+
+.about__text p {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--Text-Paragrapf);
+    text-transform: capitalize;
+}
+
+.about__text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--Text-White));
+    pointer-events: none;
+}
+
+.about__btn {
+    display: inline-block;
+    margin-top: -28px;
+    padding: 8px 20px;
+    background-color: var(--Text-GreyDark, #121212);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    z-index: 1;
+}
+
+#show-more:checked ~ .about__text {
+    max-height: 2000px;
+}
+
+#show-more:checked ~ .about__text::after {
+    display: none;
+}
+
+#show-more:checked ~ .about__btn {
+    display: none;
+}
+
+/* picture */
+
+.about__middle-part__picture {
+    height: 298px;
+    width: 525px;
+    object-fit: cover;
+}
+
+
+
+/* stats */
+
+.about__stats {
+    max-width: 970px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* cards */
+
+.about__card {
+    display: flex;
+    flex-direction: column;
+    height: 161px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.about__card1 { height: 89px; width: 89px; }
+.about__card2 { height: 79px; width: 79px; }
+.about__card3 { height: 72px; width: 72px; }
+.about__card4 { height: 72px; width: 72px; }
+
+
+.about__card-info img {
+    height: 89px;
+    width: 89px;
+    object-fit: cover;
+}
+
+.about__card-info--factor {
+    font-family: var(--Roboto);
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--Text-GreyDark);
+    text-align: center;
+}
+
+.about__card-info--result {
+    font-family: var(--Roboto);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--Text-Paragrapf);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
