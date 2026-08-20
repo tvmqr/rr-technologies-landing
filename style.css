@@ -16,6 +16,7 @@
   --Text-Paragrapf: #475569;
   --Red: #E54A2A;
   --LightBlue: #EBF0FF;
+  --GreenGrey: #767676;
   --FontFamily: Arial, Helvetica, sans-serif;
   --Nunito: 'Nunito', sans-serif;
   --Open-Sans: 'Open Sans', sans-serif;
@@ -613,6 +614,141 @@ button {
     width: 19px;
     object-fit: cover;
 }
+
+
+
+
+
+/* ===== ADVANTAGES ===== */
+
+.advantages__content {
+    background: url(assets/images/advantages_background.png);
+    padding: 76px 0 100px;
+    background-size: cover;
+    background-position: center;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+
+/* text */
+
+.advantages__text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 1037px;
+    margin: 0 auto;
+}
+
+.advantages__text h2 {
+    font-family: var(--Roboto);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--Primary);
+}
+
+.advantages__text span {
+    font-family: var(--Nunito);
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    color: var(--Text-GreyDark);
+}
+
+.advantages__text p {
+    font-family: var(--FontFamily);
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--Text-Paragrapf);
+}
+
+
+
+/* cards */
+
+.advantages__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 15px;
+    max-width: 1037px;
+    margin: 0 auto;
+}
+
+
+.advantages__card {
+    height: 383px;
+    width: 333px;
+    padding: 24px 15px;
+    text-transform: capitalize;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    /* appearance */
+    background-color: var(--Text-White);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.advantages__card--image1 {
+    height: 51px;
+    width: 51px;
+    object-fit: cover;
+}
+.advantages__card--image2 {
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+}
+.advantages__card--image3 {
+    height: 62px;
+    width: 62px;
+    object-fit: cover;
+}
+.advantages__card--image4 {
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+}
+
+
+.advantages__card h3 {
+    font-family: var(--Nunito);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--Text-GreyDark);
+}
+
+
+.advantages__card p {
+    font-family: var(--FontFamily);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--GreenGrey);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
