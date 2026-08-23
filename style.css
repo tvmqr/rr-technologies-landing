@@ -162,67 +162,31 @@ button {
 }
 
 .hero__content {
-    background: url(assets/images/head-background.webp);
+    background: url(assets/images/hero_background.webp);
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     height: 100%;
-    padding: 140px 37.5px 82px;
+    padding: 491px 37.5px 0;
 }
 
 
 
-.hero__welcome {
-    background: url(assets/images/head-planet.webp) no-repeat top center / 100% auto;
-    width: 100%;
-    max-width: 996px;
-    aspect-ratio: 996 / 457;
-    /* flex */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 
-
-.hero__welcome h1 {
-    margin-top: 11%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 68px;
-    font-weight: 900;
-    line-height: 83px;
-    letter-spacing: -0.02em;
-    color: var(--Text-GreyDark);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.welcome-rr {
-    color: var(--Primary);
-}
-
-
-.header__welcome__bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.header__welcome__bottom p {
+.hero__content p {
     max-width: 557px;
     font-size: 16px;
     line-height: 22px;
     color: var(--Text-Paragrapf);
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 20px;
 }
 
-.header__welcome__bottom a {
-    height: 45px;
+.hero__content a {
+    height: 70px;
     width: 130px;
     background-color: var(--Text-GreyDark);
     border-radius: 8px;
@@ -239,10 +203,13 @@ button {
 }
 
 
-
-
-
 .hero__mouse {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero__mouse img {
     height: 39px;
     width: 39px;
     object-fit: cover;
@@ -706,7 +673,7 @@ button {
 }
 
 
-.advantages__card--image1 {
+.advantages__card--image {
     height: 51px;
     width: 51px;
     object-fit: cover;
@@ -897,7 +864,7 @@ button {
     display: flex;
     gap: 152px;
     align-items: center;
-    padding: 0 37,5px;
+    padding: 0 37.5px;
 }
 
 
@@ -957,9 +924,9 @@ button {
 .form_content {
     padding: 111px 37.5px;
     display: flex;
-    gap: 152px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 
@@ -1081,14 +1048,14 @@ button {
 }
 
 .footer__content {
-    padding: 0 37,5px;
+    padding: 30px 37.5px;
     max-width: 1040px;
     margin: 0 auto;
     border-top: 1px solid var(--Text-Paragrapf);
 }
 
 .footer__content p {
-    margin: 30px 0;
+    
     font-family: var(--Inter);
     font-weight: 500;
     font-size: 16px;
@@ -1100,8 +1067,24 @@ button {
 
 
 
+
+
+/* ===== TABLET (768px – 1118px) ===== */
+
+@media (max-width: 1118px) {
+
+}
+
+
+
+
+
+
+
 /* ===== MOBILE (≤767px) ===== */
 
 @media (max-width: 767px) {
   /* Здесь стили для телефонов */
 }
+
+
