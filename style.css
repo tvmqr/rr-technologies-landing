@@ -131,6 +131,13 @@ button {
 }
 
 
+.header__rightnav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
 .header__contactus-link {
     height: 37px;
     width: 123px;
@@ -146,6 +153,84 @@ button {
     font-weight: 600;
     color: var(--Text-White);
     text-transform: capitalize;
+}
+
+
+
+/* burger!!!!!!! */
+
+/* TOGGLE – hidden state */
+
+#nav-toggle {
+    display: none;
+}
+
+/* TRIGGER – icon (☰ → ✕ on :checked) */
+
+.nav-trigger {
+    display: inline-block;
+    width: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.nav-trigger::before {
+    content: "☰";
+}
+
+#nav-toggle:checked ~ .nav-trigger::before {
+    content: "✕";
+}
+
+/* WRAPPER – anchor for absolute dropdown*/
+
+.nav-wrapper {
+    position: relative;
+    display: none;
+}
+
+/* DROPDOWN – hidden by default, shown when checkbox is checked*/
+
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1001;
+
+    background: white;
+    box-shadow: 0 .25rem .75rem rgba(0,0,0,0.1);
+    border-radius: .3125rem;
+    min-width: 11.25rem;
+}
+
+#nav-toggle:checked ~ .nav-dropdown {
+    display: block;
+}
+
+/* DROPDOWN ITEMS */
+
+.nav-dropdown a {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    transition: background 0.2s;
+    border-bottom: .0625rem solid var(--Primary-a20);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--Text-Dark);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.nav-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown a:hover {
+    background: var(--Primary-a10);
 }
 
 
@@ -922,11 +1007,11 @@ button {
 }
 
 .form_content {
-    padding: 111px 37.5px;
+    padding: 111px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 
@@ -948,6 +1033,7 @@ button {
     flex-direction: column;
     gap: 40px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
 }
 
 
@@ -1069,9 +1155,170 @@ button {
 
 
 
-/* ===== TABLET (768px – 1118px) ===== */
+/* ===== TABLET (768px – 1136px) ===== */
 
-@media (max-width: 1118px) {
+@media (max-width: 1136px) {
+
+    /* ===== HEADER ===== */
+
+    .header__nav-bar {
+        display: none;
+    }
+
+   .nav-wrapper {
+        display: block;
+   }
+
+
+
+
+
+   /* ===== HERO ===== */
+
+   .hero {
+        height: 600px;
+   }
+
+   .hero__content {
+        padding: 380px 37.5px 0;
+    }
+
+
+
+
+
+   /* ===== ABOUT ===== */
+
+   .about {
+        padding: 40px 0 77px;
+    }
+
+   .about__middle-part {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 77px;
+    }
+
+   .about__middle-part__picture {
+        width: 100%;
+        height: auto;
+        max-width: 525px;
+        margin: 0 auto;
+    }
+
+    .about__middle-part__picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about__text {
+        max-height: 150px;
+    }
+
+
+
+    .about__stats {
+        justify-content: space-around;
+    }
+
+
+
+
+
+    /* ===== SERVICES ===== */
+
+    .services__content {
+        flex-direction: column;
+        align-items: center;
+        padding: 37.5px;
+    }
+
+    .services__text {
+        text-align: center;
+        max-width: 500px;
+    }
+
+
+
+
+
+    /* ===== ADVANTAGES ===== */
+
+    .advantages__content {
+        padding: 40px 20px;
+    }
+
+    .advantages__card {
+        width: calc(50% - 15px);
+        height: auto;
+    }
+
+
+
+
+
+    /* ===== PORTFOLIO ===== */
+
+    .portfolio__content {
+        padding: 37.5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 37.5px;
+    }
+
+    .portfolio__main {
+        flex-direction: column;
+        align-items: center;
+        gap: 37.5px;
+    }
+
+    .portfolio__main__list {
+        text-align: center;
+    }
+
+    .portfolio__main--arrow {
+        display: none;
+    }
+
+    .portfolio__main__cards {
+        justify-content: center;
+    }
+
+
+
+
+
+    /* ===== TESTIMONIAL ===== */
+
+    .testimonial__content {
+        padding: 37.5px;
+        gap: 37.5px;
+    }
+
+    .testimonial__cards {
+        flex-direction: column-reverse;
+        gap: 37.5px;
+    }
+
+
+
+
+
+    /* ===== FORM ===== */
+
+    .form_content {
+        flex-direction: column-reverse;
+        padding: 40px 37.5px;
+        gap: 40px;
+    }
+
+    .form_content img {
+        width: 100%;
+        height: auto;
+        max-width: 505px;
+        margin: 0 auto;
+    }
 
 }
 
@@ -1084,7 +1331,242 @@ button {
 /* ===== MOBILE (≤767px) ===== */
 
 @media (max-width: 767px) {
-  /* Здесь стили для телефонов */
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+
+
+
+    /* ===== HEADER ===== */
+
+    .header__content {
+        padding: 0 16px;
+    }
+
+    .header__rightnav {
+        gap: 16px;
+    }
+
+
+
+
+
+   /* ===== HERO ===== */
+
+   .hero {
+        height: 450px;
+   }
+
+   .hero__content {
+        padding: 300px 37.5px 0;
+    }
+
+    .hero__content a {
+        height: 45px;
+    }
+
+    .hero__mouse {
+        display: none;
+    }
+
+
+
+
+
+    /* ===== ABOUT ===== */
+
+    .about {
+        padding: 35px 0 50px;
+    }
+
+    .about__content {
+        padding: 0 16px;
+        gap: 50px;
+    }
+
+    .about__head__main-agency-parapgaph {
+        font-size: 32px;
+    }
+
+    .about__text-wrap {
+        max-width: 100%;
+    }
+
+    .about__text {
+        max-height: 200px;
+    }
+
+    .about__stats {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .about__card {
+        width: 45%;
+    }
+
+
+
+
+
+    /* ===== SERVICES ===== */
+
+    .services__content {
+        padding: 30px 16px;
+    }
+
+    .services__text p {
+        font-size: 32px;
+    }
+
+    .services__cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .services__card {
+        width: calc(50% - 10px);
+        max-width: none;
+        margin-bottom: 0;    
+    }
+
+    .services__card__link {
+        right: 10px;
+        bottom: 10px;
+    }
+
+
+
+
+
+    /* ===== ADVANTAGES ===== */
+
+    .advantages__content {
+        padding: 30px 16px;
+        gap: 30px;
+    }
+
+    .advantages__text span {
+        font-size: 32px;
+    }
+
+    .advantages__cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .advantages__card {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+
+
+
+
+    /* ===== PORTFOLIO ===== */
+
+    .portfolio__content {
+        padding: 20px 16px;
+    }
+
+    .portfolio__head h2 {
+        font-size: 32px;
+    }
+
+    .portfolio__main__cards {
+        justify-content: center;
+    }
+
+    .portfolio__main__cards img {
+        width: calc(50% - 5px);
+        height: auto;
+    }
+
+    .portfolio__main__list {
+        text-align: center;
+        gap: 10px;
+    }
+
+
+
+
+
+    /* ===== TESTIMONIAL ===== */
+
+    .testimonial__content {
+        padding: 20px 16px;
+    }
+
+    .testimonial--head h2 {
+        font-size: 32px;
+    }
+
+    .testimonial__quotes {
+        height: 22px;
+        width: 22px;
+    }
+
+    .testimonial__cards {
+        gap: 20px;
+    }
+
+    .testimonial__card {
+        width: 100%;
+        padding: 15px;
+        height: auto;
+    }
+
+    .testimonial__card p {
+        margin-left: 0;
+    }
+
+
+
+
+
+    /* ===== FORM ===== */
+
+    .form_content {
+        padding: 20px 16px;
+        gap: 30px;
+    }
+
+    .form__main {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form__head {
+        width: 100%;
+    }
+
+    .form__head h2 {
+        font-size: 32px;
+    }
+
+    .form__head p {
+        font-size: 14px;
+    }
+
+
+
+
+    
+    /* ===== FOOTER ===== */
+
+    .footer__content {
+        padding: 20px 16px;
+    }
+
 }
 
 
