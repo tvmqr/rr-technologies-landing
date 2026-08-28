@@ -114,6 +114,7 @@ button {
     justify-content: space-between;
     align-items: center;
     padding: 0 37.5px;
+    position: relative;
 }
 
 
@@ -133,6 +134,9 @@ button {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header__nav-bar a {
@@ -157,6 +161,7 @@ button {
     width: 123px;
     background-color: var(--Primary);
     border-radius: 100px;
+    margin-left: 5px;
     /* flex */
     display: flex;
     justify-content: center;
@@ -468,7 +473,7 @@ button {
     display: inline-block;
     margin-top: -28px;
     padding: 8px 20px;
-    background-color: var(--GreyDark, --Dark);
+    background-color: var(--GreyDark, #121212);
     color: var(--White);
     border-radius: 8px;
     cursor: pointer;
@@ -893,6 +898,8 @@ button {
     color: var(--GreyDark);
     text-transform: capitalize;
     white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .portfolio__main__list--first {
@@ -925,6 +932,7 @@ button {
     width: 169px;
     object-fit: cover;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 
@@ -1401,7 +1409,7 @@ button {
    }
 
    .hero__content {
-        padding: 300px 37.5px 0;
+        padding: 300px 16px 0;
     }
 
     .hero__content a {
@@ -1856,5 +1864,185 @@ body:has(#theme-toggle:checked) {
 
 
 }
+
+
+
+
+
+
+
+/* ===== ANIMATION ===== */
+
+
+
+/* buttons */
+
+.header__contactus-link,
+.hero__content a,
+.form__input--submit,
+.about__btn,
+.services__card__link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__contactus-link:hover,
+.hero__content a:hover,
+.form__input--submit:hover,
+.about__btn:hover,
+.services__card__link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* nav-bar */
+
+.header__nav-bar a,
+.portfolio__main__list--one {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header__nav-bar a::after,
+.portfolio__main__list--one::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--Primary);
+    transition: width 0.3s ease;
+}
+
+.header__nav-bar a:hover,
+.portfolio__main__list--one:hover {
+    color: var(--Primary);
+    transform: translateY(-2px);
+}
+
+.header__nav-bar a:hover::after,
+.portfolio__main__list--one:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+/* cards */
+
+.services__card,
+.advantages__card,
+.testimonial__card,
+.portfolio__main__cards img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services__card:hover,
+.advantages__card:hover,
+.testimonial__card:hover,
+.portfolio__main__cards img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+
+/* icons pulsation */
+
+.advantages__card--image, .about__card img {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
+
+
+
+
+
+/* theme */
+
+body,
+.header,
+.hero,
+.about__content,
+.services__content,
+.advantages__content,
+.portfolio__content,
+.testimonial__content,
+.form_content,
+.footer__content {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* THEME TOGGLE ANIMATION */
+
+.header__theme-toggle {
+    position: relative;
+}
+
+.header__theme-toggle--icon,
+.header__theme-toggle--darkicon {
+    position: absolute;
+    display: block !important;
+    object-fit: contain;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.header__theme-toggle--icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.header__theme-toggle--darkicon {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+}
+
+body:has(#theme-toggle:checked) .header__theme-toggle--icon {
+    opacity: 0;
+    transform: rotate(180deg) scale(0.5);
+}
+
+body:has(#theme-toggle:checked) .header__theme-toggle--darkicon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+
+
+
+
+/* form */
+
+.form__input--field:hover {
+    border-color: var(--Primary);
+    box-shadow: 0 4px 12px rgba(83, 128, 234, 0.15);
+}
+
+
+
+.form__input--field:focus {
+    border-color: var(--Primary);
+    box-shadow: 0 0 0 3px rgba(83, 128, 234, 0.2);
+}
+
+
+
+.form__input--submit:active {
+    transform: scale(0.96);
+    box-shadow: 0 4px 12px rgba(83, 128, 234, 0.4);
+}
+
+
+
 
 
