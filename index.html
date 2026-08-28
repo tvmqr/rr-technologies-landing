@@ -20,7 +20,8 @@
         <div class="container">
             <div class="header__content">
 
-                <img src="assets/images/header-logo.png" alt="RR Technologies header logo">
+                <img src="assets/images/header-logo.png" alt="RR Technologies header logo" class="header__logo">
+                <img src="assets/images/dark-theme/header__logo--dark.png" alt="Logo" class="header__logo--dark">
 
                 <div class="header__nav-bar">
                     <a href="#">services</a>
@@ -31,6 +32,15 @@
 
                 <div class="header__rightnav">
                     <a href="#" class="header__contactus-link">contact us</a>
+
+                    <div>
+                        <input type="checkbox" id="theme-toggle" class="visually-hidden">
+                        <label for="theme-toggle" class="header__theme-toggle">
+                            <img src="assets/images/dark-theme/header__theme-moon.svg" alt="" class="header__theme-toggle--icon">
+                            <img src="assets/images/dark-theme/header__theme-sun.svg" alt="" class="header__theme-toggle--darkicon">
+                        </label>
+                    </div>
+                    
                     <div class="nav-wrapper">
                         <input type="checkbox" id="nav-toggle" aria-hidden="true">
                         <label for="nav-toggle" class="nav-trigger" tabindex="0"></label>
@@ -300,7 +310,8 @@
 
                     <div class="portfolio__head">
                         <h2>Our portfolio</h2>
-                        <img src="assets/images/portfolio-head-line.png" alt="">
+                        <img src="assets/images/portfolio-head-line.png" alt="" class="portfolio__head--image">
+                        <img src="assets/images/dark-theme/portfolio-head-linedark.webp" alt="" class="portfolio__head--imagedark">
                     </div>
 
                     <div class="portfolio__main">
@@ -421,8 +432,10 @@
 
                         </div>
 
-                        <button class="form__input--submit" type="submit">Submit</button>
-
+                        <div class="form__input--bottompart">
+                            <button class="form__input--submit" type="submit">Submit</button>
+                        </div>
+                        
                     </form>
 
                 </div>
