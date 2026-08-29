@@ -23,6 +23,7 @@ Ready for any CMS or backend integration.
 ## ✨ Key Highlights
 
 - ✅ **Dark/light theme toggle** – pure CSS, no JavaScript needed.  
+- 🎯 **Pixel-perfect implementation** matching the original design 1:1.
 - 🎬 **CSS animations** – smooth hover on buttons, cards, forms, and nav links.  
 - 📱 **Fully responsive** – looks great on every screen, from mobile to 4K.  
 - 📬 **Working contact form** – connected to Formspree, ready to receive submissions.  
